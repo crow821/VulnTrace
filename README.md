@@ -146,6 +146,3 @@ bash run-sqlmap.sh
 
 你可以通过 GitHub Star 支持该项目持续更新 👇
 [https://github.com/crow821/vulntrace](https://github.com/crow821/vulntrace)
-
-![Stargazers over time](https://starchart.cc/crow821/vulntrace.svg)
-
