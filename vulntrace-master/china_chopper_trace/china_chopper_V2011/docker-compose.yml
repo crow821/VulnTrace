@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: ./web
+    image: china_chopper_v2011_vulntrace:v1.0  
+    ports:
+      - "8080:80"
+    container_name: php5_china_chopper_v2011_lab
+    volumes:
+      - ./access_logs:/var/log/apache2
+    labels:
+      maintainer: "vulntrace@gmail.com"
