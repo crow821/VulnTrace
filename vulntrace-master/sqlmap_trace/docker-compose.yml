@@ -7,19 +7,20 @@ version: '3.8'
 services:
   web:
     build: ./web
+    image: vulntrace/sqlmap_trace:v1.0  
+    container_name: php5_sqlmap_vulntrace_web 
     ports:
       - "8080:80"
     depends_on:
       - mysql
-    container_name: php5_sql_vuln_web
     volumes:
       - ./access_logs:/var/log/apache2
     labels:
       maintainer: "vulntrace@gmail.com"
 
   mysql:
-    image: mysql:5.7
-    container_name: mysql_sql_vuln
+    image: mysql:5.7  
+    container_name: mysql_vulntrace  
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
